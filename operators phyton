@@ -1,0 +1,30 @@
+#identity operators
+
+a=[10,20]
+b=[30,40]
+c=a
+print(a is c) #it will print true
+print(b is a) #it will print False
+print(a==b) #it will print False
+print(a is not b) #it will print true
+
+#membership operators
+
+a=[10,20,30,40,50]
+print(50  in a) #it will print true
+print(30 not in a) #it will print false
+
+#bitwise operators
+x=10
+y=7 
+print(x&y) # & => AND => if both bits are 1, it sets each bit to 1 , otherwise 0
+
+print(x|y) # | => OR => if one of the two bits is 1 , it sets each bit to 1 , otherwise 0 
+
+print(x^y) # ^ => XOR => if only one of the two bits is 1 , it sets each bit to 1
+
+print(~y) # ~ => NOT => complement operator, it returns one's complement o
+
+print(x<<y) # << => Zero fill left shift => the binary number is appended with 0's at the end
+
+print(x>>y) # >> => Right SHift => In simple terms, the right side of the bits are removed
