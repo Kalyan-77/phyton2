@@ -1,0 +1,62 @@
+
+# if(condition):
+
+x=19
+y = 9
+if(x>y):
+   print('x is greater than y') #19 is greater than 9 s0 it will print this sentence
+else:
+    print('x is less than y') #since 19 is greater than 9 it does not print it
+
+
+x=int(input("college Entry Time:"))
+y=int(input("student Enter Time:"))
+
+if(x>y):
+    print('you can enter in the college')
+elif(x==y):
+    print('you can enter with late remarks')
+elif(y>12):
+    print('allowed to enter in the college with proper felicitation')
+else:
+    print('go back to hostel')
+
+
+# short hand if condition
+
+if(5>2): print('10 is greater than 5')
+
+# # short hand if-else condition
+
+x = 20
+y = 10
+print(x>y)
+if(x==y):print("x,y are equal")
+else:print("x,y are not equal")
+
+# # and and or keywords. , logical operators
+
+x = 10
+y = 20
+z = 30
+
+if(x<y and x<z):
+   print('both the conditions are true')
+
+if(x<y or x<z):
+   print('If any one of the condition is true')
+
+
+# nested conditions
+
+age=int(input("age:"))
+
+if( age < 18):
+    print('age is less than 18')
+    if(age < 10):
+        print('the person is a minor. no entry allowed')
+    else:
+        print('the person is allowed') 
+else:
+    print('age is greater than or equal to 18')
+
