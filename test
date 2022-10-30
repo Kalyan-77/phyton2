@@ -1,0 +1,502 @@
+Test  1 30 Oct 
+
+2. Given the nested if-else below, what will be the value x when the code executed successfully
+x = 0
+a = 5
+b = 5
+if a > 0:
+    if b < 0: 
+        x = x + 5 
+    elif a > 5:
+        x = x + 4
+    else:
+        x = x + 3
+else:
+    x = x + 2
+print(x)
+ 0
+ 4
+ 2
+ 3
+
+ans:3
+
+
+3. What is the output of the following nested loop?
+for num in range(10, 14):
+   for i in range(2, num):
+       if num%i == 1:
+          print(num)
+          break
+ Option 1: 10
+      11
+      12
+      13
+Option 2 :11
+    13
+
+Ans:option 1
+
+
+
+4. What is the output of the following loop
+for l in 'Jhon':
+   if l == 'o':
+      pass
+   print(l, end=", ")
+ J, h, n,
+ J, h, o, n,
+
+Ans:j,h,o,n
+
+
+
+5. What is the value of x after the following nested for loop completes its execution
+x = 0
+for i in range(10):
+  for j in range(-1, -10, -1):
+    x += 1
+    print(x)
+ 99
+ 90
+ 100
+
+Ans:90
+
+
+
+6. Select which is true for for loop
+ Python’s for loop used to iterates over the items of list, tuple, dictionary, set, or string
+ else clause of for loop is executed when the loop terminates naturally
+ else clause of for loop is executed when the loop terminates abruptly
+ We use for loop when we want to perform a task indefinitely until a particular condition is met
+
+Ans: Python’s for loop used to iterates over the items of list, tuple, dictionary, set, or string
+
+
+
+
+
+7. What is the output of the following if statement
+a, b = 12, 5
+if a + b:
+    print('True')
+else:
+  print('False')
+ False
+ True
+
+
+Ans:true
+
+
+
+
+
+8. Given the nested if-else structure below, what will be the value of x after code execution completes
+x = 0
+a = 0
+b = -5
+if a > 0:
+    if b < 0: 
+        x = x + 5 
+    elif a > 5:
+        x = x + 4
+    else:
+        x = x + 3
+else:
+    x = x + 2
+print(x)
+ 2
+ 0
+ 3
+ 4
+
+Ans:2
+
+
+
+9. What is the output of the following for loop and  range() function
+for num in range(-2,-5,-1):
+    print(num, end=", ")
+ -2, -1, -3, -4
+ -2, -1, 0, 1, 2, 3,
+ -2, -1, 0
+ -2, -3, -4,
+
+Ans: -2, -3, -4,
+
+
+
+
+10. What is the value of the var after the for loop completes its execution
+var = 10
+for i in range(10):
+    for j in range(2, 10, 1):
+        if var % 2 == 0:
+            continue
+            var += 1
+    var+=1
+else:
+    var+=1
+print(var)
+ 20
+ 21
+ 10
+ 30
+
+Ans:21
+
+
+
+11. What is the output of the following nested loop
+numbers = [10, 20]
+items = ["Chair", "Table"]
+
+for x in numbers:
+  for y in items:
+    print(x, y)
+Option 1: 10 Chair
+10 Table
+20 Chair
+20 Table
+Option 2 10 Chair
+    10 Table
+
+Ans:option 1
+
+
+
+12. What is the output of the following range() function
+for num in range(2,-5,-1):
+    print(num, end=", ")
+ 2, 1, 0
+ 2, 1, 0, -1, -2, -3, -4, -5
+ 2, 1, 0, -1, -2, -3, -4
+
+Ans: 2, 1, 0, -1, -2, -3, -4
+
+
+
+
+13. What is the value of x
+x = 0
+while (x < 100):
+  x+=2
+print(x)
+ 101
+ 99
+ None of the above, this is an infinite loop
+ 100
+
+
+Ans:100
+
+
+
+
+
+
+
+
+
+
+
+Test 2 30 Oct
+
+
+
+Exercise 1: Print First 10 natural numbers using while loop
+ANSWER:    x = 1
+
+while x <= 6:
+    print(x)
+x += 1
+
+
+
+
+
+Exercise 2: Print the following pattern
+Write a program to print the following number pattern using a loop.
+ANSWER:
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+        print(j, end=' ')
+    print('')
+
+
+
+Exercise 3: Calculate the sum of all numbers from 1 to a given number
+Write a program to accept a number from a user and calculate the sum of all numbers from 1 to a given number
+For example, if the user entered 10 the output should be 55 (1+2+3+4+5+6+7+8+9+10)
+
+ANSWER:n = int(input("Enter number "))
+sum = 0
+for num in range(1, n + 1, 1):
+    sum = sum + num
+print("Sum is: ", sum)
+
+
+
+Exercise 4: Write a program to print multiplication table of a given number
+For example, num = 2 so the output should be
+
+ANSWER:
+num = 2
+for i in range(1, 11):
+   print(num*i)
+
+
+
+
+
+Exercise 5: Display numbers from a list using loop
+Write a program to display only those numbers from a list that satisfy the following conditions
+The number must be divisible by five
+If the number is greater than 150, then skip it and move to the next number
+If the number is greater than 500, then stop the loop
+
+ANSWER:
+a = [12, 75, 150, 180, 145, 525, 50]
+b = []
+for i in a:
+    if i > 150:
+        if i > 500:
+            break
+        continue
+    if i % 5 == 0:
+        b.append(i)
+        
+print(b)
+
+
+
+
+
+Exercise 6: Count the total number of digits in a number
+Write a program to count the total number of digits in a number using a while loop
+For example, the number is 75869, so the output should be 5.
+
+ANSWER:
+num = 75869
+count = 0
+
+while num != 0:
+    num //= 10
+    count += 1
+
+print(str(count))
+
+
+
+
+
+Exercise 7: Print the following pattern
+Write a program to use for loop to print the following reverse number pattern
+
+ANSWER:
+n = 5
+k = 5
+for i in range(0,n+1):
+    for j in range(k-i,0,-1):
+        print(j,end=' ')
+    print()
+    
+    
+    
+    
+    Exercise 8: Print list in reverse order using a loop
+Given:
+list1 = [10, 20, 30, 40, 50]
+
+ANSWER:
+list1 = [10, 20, 30, 40, 50]
+new_list = reversed(list1)
+for item in new_list:
+    print(item)
+    
+    
+    
+    
+    
+    Exercise 9: Display numbers from -10 to -1 using for loop
+
+ANSWER:
+for num in range(-10, 0, 1):
+    print(num)
+    
+    
+    
+    
+    
+    
+    Exercise 10: Use else block to display a message “Done” after successful execution of for loop
+For example, the following loop will execute without any error.
+Given:
+for i in range(5):
+    print(i)
+ANSWER:
+for i in range(5):
+    print(i)
+else:
+    print("Done!")
+    
+    
+    
+    
+    
+    Exercise 11: Write a program to display all prime numbers within a range
+Note: A Prime Number is a number that cannot be made by multiplying other whole numbers. A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
+Examples:
+6 is not a prime mumber because it can be made by 2×3 = 6
+37 is a prime number because no other whole numbers multiply together to make it.
+
+ANSWER:
+start = 25
+end = 50
+print("Prime numbers between", start, "and", end, "are:")
+
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            print(num)
+            
+            
+            
+               
+  Exercise 12: Display Fibonacci series up to 10 terms
+The Fibonacci Sequence is a series of numbers. The next number is found by adding up the two numbers before it. The first two numbers are 0 and 1.
+For example, 0, 1, 1, 2, 3, 5, 8, 13, 21. The next number in this series above is 13+21 = 34.
+
+ANSWER:
+num1, num2 = 0, 1
+
+print("Fibonacci sequence:")
+# run loop 10 times
+for i in range(10):
+    # print next number of a series
+    print(num1, end="  ")
+    # add last two numbers to get next number
+    res = num1 + num2
+
+    # update values
+    num1 = num2
+    num2 = res
+    
+    
+    
+    
+    Exercise 13: Find the factorial of a given number
+Write a program to use the loop to find the factorial of a given number.
+The factorial (symbol: !) means to multiply all whole numbers from the chosen number down to 1.
+For example: calculate the factorial of 5
+5! = 5 × 4 × 3 × 2 × 1 = 120
+
+ANSWER:
+num = 5
+factorial = 1
+if num < 0:
+    print("Factorial does not exist for negative numbers")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    # run loop 5 times
+    for i in range(1, num + 1):
+        # multiply factorial by current number
+        factorial = factorial * i
+    print("The factorial of", num, "is", factorial)
+    
+    
+    
+    
+    
+    
+    Exercise 14: Reverse a given integer number
+Given:
+76542
+
+ANSWER:
+num = 76542
+reverse_number = 0
+print("Given Number ", num)
+while num > 0:
+    reminder = num % 10
+    reverse_number = (reverse_number * 10) + reminder
+    num = num // 10
+print("Revere Number ", reverse_number)
+
+
+
+
+Exercise 15: Use a loop to display elements from a given list present at odd index positions
+Given:
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+Note: list index always starts at 0
+
+ANSWER:
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in my_list[1::2]:
+    print(i, end=" ")
+    
+    
+    
+    
+    Exercise 16: Calculate the cube of all numbers from 1 to a given number
+Write a program to rint the cube of all numbers from 1 to a given number
+Given:
+input_number = 6
+
+ANSWER:
+input_number = 6
+for i in range(1, input_number + 1):
+    print("Current Number is :", i, " and the cube is", (i * i * i))
+    
+    
+    
+    
+    Exercise 17: Find the sum of the series upto n terms
+Write a program to calculate the sum of series up to n term. For example, if n =5 the series will become 2 + 22 + 222 + 2222 + 22222 = 24690
+Given:
+# number of terms
+n = 5
+
+ANSWER:
+n = 5
+# first number of sequence
+start = 2
+sum_seq = 0
+
+# run loop n times
+for i in range(0, n):
+    print(start, end="+")
+    sum_seq += start
+    # calculate the next term
+    start = start * 10 + 2
+print("\nSum of above series is:", sum_seq)
+
+
+
+
+
+Exercise 18: Print the following pattern
+Write a program to print the following start pattern using the for loop
+
+ANSWER:
+rows = 5
+for i in range(0, rows):
+    for j in range(0, i + 1):
+        print("*", end=' ')
+    print("\r")
+
+for i in range(rows, 0, -1):
+    for j in range(0, i - 1):
+        print("*", end=' ')
+    print("\r")
+
+
+
