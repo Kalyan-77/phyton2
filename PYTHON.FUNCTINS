@@ -1,0 +1,77 @@
+def printName(name, age):
+  print('My name is ' + name + "and my age is " + age)
+
+printName('RAM','10',)
+printName('BOY', '10',)
+
+
+def printSum(num1, num2):
+   print(num1 + num2)
+
+printSum(10,20)
+printSum(20,40)
+
+
+
+# aribtrary arguments
+
+
+
+def myName(*name):
+   print('My name is ' + name[2])
+   print(name)
+
+
+myName('John', 'Peter', 'Raj')
+
+# key words arguments
+
+def myName(name3, name1, name2):
+   print('My name is ' + name3)
+
+
+myName(name1='John',name2= 'Peter',name3= 'Raj')
+myName('John', 'Peter', 'Raj')
+
+# arbitrary keyword arguments
+
+
+def myName(**name):
+    print(name)
+    print( 'my name is ' + name["name2"])
+
+
+myName(name1='John',name2= 'Peter',name3= 'Raj')
+
+
+# default parameter value
+def myFunc(age = '40'):
+    print('My age is ' + age)
+
+myFunc('10')   
+myFunc('20')   
+myFunc()   
+
+
+
+def printFruit(fruits):
+    print(fruits)
+    for fruit in fruits:
+        print(fruit)
+
+fruits = ['apples', 'bananas', 'oranges']
+printFruit(fruits)
+
+
+def printAge():
+    print(10)
+    print(10)
+    return 20
+    print(printAge())
+
+def myFunc(x):
+    return 2*x
+
+print(myFunc(5))
+print(myFunc(6))
+
