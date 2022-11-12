@@ -1,0 +1,170 @@
+1)
+
+
+def sum(n):
+   if n <= 1:
+       return n
+   else:
+       return n + sum(n-1)
+
+num = int(input())
+
+if num < 0:
+   print("Enter a positive number")
+else:
+   print("The sum is",sum(num))
+
+
+
+2)
+def reverse(x):
+  return x[::-1]
+
+a = str(input())
+
+print(reverse(a))
+
+
+
+
+3)
+def sum(numbers):
+    total = 0
+    for x in numbers:
+        total += x
+    return total
+
+print(sum((1, 2, 3, 4, 5)))
+
+
+
+
+
+4)
+def Power(N,X):
+  P=1
+  for i in range(1, X+1):
+    P=P*N
+  return P
+  
+N,X=2,3
+print(Power(N,X))
+
+
+
+
+3)
+def odd(num1,num2):
+    if num1>num2:
+        return
+    print(num1+1,end=" ")
+    return odd(num1+2,num2)
+    
+    
+    
+    
+    4)def check(n):
+    if (n < 2):
+        return (n % 2 == 0)
+    return (check(n - 2))
+n=int(input("Enter number:"))
+if(check(n)==True):
+      print("Number is even!")
+else:
+      print("Number is odd!")
+      
+      
+      
+      
+      5)
+      def check(n, div = None):
+    if div is None:
+        div = n - 1
+    while div >= 2:
+        if n % div == 0:
+            print("Number not prime")
+            return False
+        else:
+            return check(n, div-1)
+    else:
+        print("Number is prime")
+        return 'True'
+n=int(input("Enter number: "))
+check(n)
+
+
+
+
+7)
+def check_palindrome(s):
+    if len(s) <= 1 :
+        return True
+    if s[0] == s[len(s) - 1] :
+        return check_palindrome(s[1:len(s) - 1])
+    else:
+        return False
+a=int(input())
+if(check_palindrome(str(a))):
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+num1=4;num2=15
+odd(num1,num2)
+
+
+
+
+
+10)
+def remove_char(str, n):
+      first_part = str[:n] 
+      last_part = str[n+1:]
+      return first_part + last_part
+print(remove_char('Python', 0))
+print(remove_char('Python', 3))
+print(remove_char('Python', 5))
+
+
+
+
+
+11)
+my_string = input("Enter a string :")
+print("The string entered by user is :")
+print(my_string)
+my_string = my_string.replace(' ','-')
+print("The modified string:")
+print(my_string)
+
+
+15)
+def isPalindrome(s):
+    return s == s[::-1]
+ 
+ 
+# Driver code
+s = "malayalam"
+ans = isPalindrome(s)
+ 
+if ans:
+    print("Yes")
+else:
+    print("No")
+    
+    
+    
+    
+    
+    
+    
+    def check(string,ch):
+      if not string:
+        return 0
+      elif string[0]==ch:
+            return 1+check(string[1:],ch)
+      else:
+            return check(string[1:],ch)
+string=raw_input("Enter string:")
+ch=raw_input("Enter character to check:")
+print("Count is:")
+print(check(string,ch))
