@@ -1,0 +1,196 @@
+EXERCISE:1
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def Perimeter(self):
+        return 2 * (self.length + self.width)
+
+    def Area(self):
+        return self.length * self.width
+
+    def display(self):
+        print(f"Length: {self.length}")
+        print(f"Width: {self.width}")
+        print(f"Perimeter: {self.Perimeter()}")
+        print(f"Area: {self.Area()}")
+
+class Parallelepiped(Rectangle):
+    def __init__(self, length, width, height):
+        super().__init__(length, width)
+        self.height = height
+
+    def Volume(self):
+        return self.length * self.width * self.height
+rect = Rectangle(10, 5)
+rect.display()
+para = Parallelepiped(10, 5, 2)
+para.display()
+print(f"Volume: {para.Volume()}")
+
+
+EXERCISE:2
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+    
+  def display(self):
+    print(f"Name: {self.name}, Age: {self.age}")
+class Student(Person):
+  def __init__(self, name, age, section):
+    super().__init__(name, age)
+    self.section = section
+    
+  def displayStudent(self):
+    print(f"Name: {self.name}, Age: {self.age}, Section: {self.section}")
+student = Student("John", 20, "A")
+student.displayStudent()
+
+
+EXERCISE:3
+
+class BankAccount:
+    def __init__(self, accountNumber, name, balance):
+        self.accountNumber = accountNumber
+        self.name = name
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdrawal(self, amount):
+        self.balance -= amount
+
+    def bankFees(self):
+        self.balance *= 0.95
+
+    def display(self):
+        print("Account Number:", self.accountNumber)
+        print("Name:", self.name)
+        print("Balance:", self.balance)
+
+account = BankAccount(123456, "John Smith", 1000)
+account.deposit(500)
+account.withdrawal(200)
+account.bankFees()
+account.display()
+
+EXERCISE-4
+
+import math
+
+class Circle:
+    def __init__(self, a, b, r):
+        self.a = a
+        self.b = b
+        self.r = r
+
+    def area(self):
+        return math.pi * self.r**2
+
+    def perimeter(self):
+        return 2 * math.pi * self.r
+
+    def testBelongs(self, x, y):
+        return (x - self.a)**2 + (y - self.b)**2 < self.r**2
+circle = Circle(0, 0, 1)
+area = circle.area()
+perimeter = circle.perimeter()
+belongs = circle.testBelongs(2, 3)
+
+
+
+EXERCISE-5
+
+class Calculation:
+    def __init__(self):
+        # The default constructor doesn't need to do anything
+        pass
+
+    def factorial(self, n: int) -> int:
+        # Initialize the result to 1
+        result = 1
+
+        # Multiply the result by each number from 1 to n
+        for i in range(1, n+1):
+            result *= i
+
+        return result
+
+    def sum(self, n: int) -> int:
+        # Initialize the result to 0
+        result = 0
+
+        # Add each number from 1 to n to the result
+        for i in range(1, n+1):
+            result += i
+
+        return result
+
+    def test_prim(self, n: int) -> bool:
+        # Return False if n is 0 or 1
+        if n in (0, 1):
+            return False
+
+        # Check if n is divisible by any number from 2 to the square root of n
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                return False
+
+        # If none of the above conditions are met, return True
+        return True
+
+    def test_prims(self, a: int, b: int) -> bool:
+        # Return True if both a and b are prime, False otherwise
+        return self.test_prim(a) and self.test_prim(b)
+
+    def table_mult(self, n: int):
+        # Print the header row
+        print("* |", end=" ")
+        for i in range(1, n+1):
+            print(f"{i:2}", end=" ")
+        print()
+        print("-" * (n*3 + 3))
+
+        # Print the rows for each number from 1 to n
+        for i in range(1, n+1):
+            print(f"{i:2} |", end=" ")
+            for j in range(1, n+1):
+                print(f"{i*j:2}", end=" ")
+            print()
+
+    def all_tables_mult(self):
+        # Print the multiplication table for each number from 1 to 9
+        for i in range(1, 10):
+            self.table_mult(i)
+            print()
+
+    @staticmethod
+    def list_div(n: int) -> List[int]:
+        # Initialize the list of divisors
+        divisors = []
+
+        # Add all divisors of n to the list
+        for i in range(1, n+1):
+            if n % i == 0:
+                divisors.append(i)
+
+        return divisors
+
+    @staticmethod
+    def list_div_prim(n: int) -> List[int]:
+        # Initialize the list of prime divisors
+        prime_divisors = []
+
+        # Check if each divisor of n is prime
+        for i in Calculation.list_div(n):
+            if Calculation.test_prim(i):
+                prime_divisors.append(i)
+
+        return prime_divisors
+
+
